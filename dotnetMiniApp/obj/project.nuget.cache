@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FM4vh8WmhlxTTa4GhITWv5rccGKcIXQ62IMGviqPyxVaU94KSQ8woJFBHykiLErPTLVpPSbMy9/C+KEeC/C8sA==",
+  "success": true,
+  "projectFilePath": "/Users/gim-wontae/practice_projects/asp_net_practice/dotnetMiniApp/dotnetMiniApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/gim-wontae/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/gim-wontae/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
