@@ -34,6 +34,22 @@ class App extends Component {
     })
   }
 
+  callApiPingPost = async () => {
+    await axios({
+      method: 'GET',
+      url: 'https://localhost:5001/Test/user_infos',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // data: [ 'ping' ],
+      withCredentials: true,
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
   renderWeatherTable = () => {
     const { weather } = this.state;
     if (!!weather) {
@@ -71,6 +87,7 @@ class App extends Component {
           this.state.weather
           && this.renderWeatherTable()
         }
+        <button onClick={() => { this.callApiPingPost() }}>TEST PING</button>
       </div>
     );
   }

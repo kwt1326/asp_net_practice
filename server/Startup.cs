@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace dotTestApiServer
 {
-    public class Startup
+    public class Startup // 임의의 스타트 형식으로 변경 할 수 있음, webBuilder.UseStartup 에서 사용 가능
     {
         readonly string AllowSpecficOrigins = "!@allow&&speci#fic$$Origi^ns";
 
