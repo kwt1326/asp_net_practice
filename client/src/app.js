@@ -21,7 +21,7 @@ class App extends Component {
   callApiWeather = async () => {
     await axios({
       method: 'GET',
-      url: 'https://localhost:5001/WeatherForecast',
+      url: 'http://localhost:5000/WeatherForecast',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -37,7 +37,7 @@ class App extends Component {
   callApiPingPost = async () => {
     await axios({
       method: 'GET',
-      url: 'https://localhost:5001/Test/user_infos',
+      url: 'http://localhost:5000/Test/user_infos',
       headers: {
         'Content-Type': 'application/json',
       },
