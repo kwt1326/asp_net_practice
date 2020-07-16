@@ -8,7 +8,10 @@ class App extends Component {
     this.state = {
       text: this.props.data.text,
       weather: [], // test call api
+      testImg: null,
     }
+
+    this.inputfile = React.createRef();
   }
 
   componentDidMount() {
@@ -35,13 +38,16 @@ class App extends Component {
   }
 
   callApiPingPost = async () => {
+    const formData = new FormData();
+    console.log(this.inputfile.files[0]);
+    formData.append("File", this.inputfile.files[0]);
     await axios({
-      method: 'GET',
-      url: 'http://localhost:5000/Test/user_infos',
+      method: 'POST',
+      url: 'http://localhost:5000/Test/upload',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'multipart/form-data',
       },
-      // data: [ 'ping' ],
+      data: formData,
       withCredentials: true,
     }).then(res => {
       console.log(res)
@@ -88,6 +94,7 @@ class App extends Component {
           && this.renderWeatherTable()
         }
         <button onClick={() => { this.callApiPingPost() }}>TEST PING</button>
+        <input ref={(mount) => { this.inputfile = mount }} type='file' />
       </div>
     );
   }
